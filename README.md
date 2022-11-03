@@ -3,9 +3,7 @@ MovieApp-Swift-UI-MVVM-With-Combine
 
 - 🔭 working in movie app as demo for MVVM with combine 
 
-- 🌱 I’m currently learning **MVP**
-
-- 👨‍💻 handel app MVVM with swiftUI
+- 👨‍💻 handel app MVVM with **swiftUI**
 
 - 👨‍💻 generic network by alamofire
 
