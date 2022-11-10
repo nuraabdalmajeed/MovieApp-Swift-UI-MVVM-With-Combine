@@ -12,8 +12,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@main
-    - name: Force Xcode 14
-      run: sudo xcode-select -switch /Applications/Xcode_14.app
     - name: Run tests
       run: xcodebuild clean test -project "MovieApp.xcodeproj" -scheme "MovieApp" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
     - name: Build App
