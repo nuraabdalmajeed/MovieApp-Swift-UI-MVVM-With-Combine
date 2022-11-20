@@ -3,16 +3,22 @@
 
 name: Swift
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build:
 
-    runs-on: macOS-latest
+    runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v2
+    - name: Force Xcode 11
+      run: sudo xcode-select -switch /Applications/Xcode_11.5.app
+    - name: Build
+      run: swift build -v
     - name: Run tests
-      run: xcodebuild clean test -project "MovieApp.xcodeproj" -scheme "MovieApp" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
-    - name: Build App
-      run: xcodebuild -project "MovieApp.xcodeproj" -scheme "MovieApp" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
+      run: swift test -v
