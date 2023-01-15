@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  MovieApp
 //
-//  Created by AMN on 10/29/22.
+//  Created by Nura on 10/29/22.
 //
 
 import SwiftUI
